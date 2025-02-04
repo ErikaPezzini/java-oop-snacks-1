@@ -7,9 +7,19 @@ public class App {
         System.out.println(studente2.getDettagli());
         System.out.println(studente3.getDettagli());
 
+        System.out.println();
+
         ContoBancario conto = new ContoBancario("123456");
         conto.deposita(100.0);
         conto.preleva(20.50);
         System.out.println("Saldo attuale: " + conto.getSaldo());
+
+        System.out.println();
+
+        RegistroStudenti registro = new RegistroStudenti();
+        registro.addStudente(studente1);
+        registro.addStudente(studente2);
+        registro.addStudente(studente3);
+        registro.stampaRegistro();
     }
 }
